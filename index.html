@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog Platform</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>My Blog Platform</h1>
+  <p>Write, Edit & Manage Blogs</p>
+  <button id="themeToggle">🌙 Dark Mode</button>
+</header>
+
+<main class="container">
+
+  <!-- Blog Editor -->
+  <section class="editor">
+    <h2>Create / Edit Blog</h2>
+    <input type="text" id="title" placeholder="Blog Title" />
+    <textarea id="content" placeholder="Write your blog here..."></textarea>
+    <button onclick="savePost()">Publish</button>
+  </section>
+
+  <!-- Blogs -->
+  <section>
+    <h2>All Blogs</h2>
+    <div id="posts"></div>
+    <div id="pagination"></div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2025 Blog Platform | Built with HTML, CSS & JS</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
