@@ -11,7 +11,7 @@ A responsive blog platform built using **HTML, CSS, and JavaScript**.
 - Data persistence using LocalStorage
 
 ## Live Demo
-👉 https://bhav-blog-platform.netlify.app/
+👉https://bhav-blog-platform.netlify.app/
 
 ## Technologies Used
 - HTML
