@@ -115,6 +115,27 @@ function changePage(p) {
 }
 
 displayPosts();
+if (!localStorage.getItem("posts")) {
+  const defaultPosts = [
+    {
+      title: "Why I Built a Blog Platform",
+      content: "This blog platform was built using HTML, CSS, and JavaScript to understand real-world CRUD operations and frontend architecture. It helped me learn DOM manipulation, pagination, and UI design.",
+      dateTime: new Date().toLocaleString()
+    },
+    {
+      title: "Understanding CRUD Operations",
+      content: "CRUD stands for Create, Read, Update, and Delete. These operations are the foundation of most applications. Implementing them in this project helped me understand data flow and user interactions.",
+      dateTime: new Date().toLocaleString()
+    },
+    {
+      title: "Importance of Responsive Web Design",
+      content: "Responsive design ensures that websites work well on all screen sizes. This project uses CSS Grid and media queries to provide a smooth experience on mobile and desktop.",
+      dateTime: new Date().toLocaleString()
+    }
+  ];
+
+  localStorage.setItem("posts", JSON.stringify(defaultPosts));
+}
 
 /* Dark Mode */
 const toggleBtn = document.getElementById("themeToggle");
@@ -129,3 +150,4 @@ toggleBtn.onclick = () => {
 if (localStorage.getItem("theme") === "dark") {
   document.body.classList.add("dark");
 }
+
